@@ -1,0 +1,331 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                        CONTENT GROWTH ENGINE                                  ║
+║                     Architecture Complète v1.0                                ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                            SYSTÈME COMPLET                                    │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    📊 DASHBOARDS PRINCIPAUX
+    ├── ContentGrowthEngine.jsx        → Navigation shell (sidebar + modules)
+    └── OverviewDashboard.jsx          → Vue système (pipeline + tech stack)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                          PHASE 1: SETUP                                       │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    📋 WF0: ONBOARDING
+    ├── Fichier: components/OnboardingForm.jsx
+    ├── Route: /cge/onboarding
+    ├── Design: Dark theme (#07070b)
+    ├── Features:
+    │   ├── Formulaire progressif 5 sections
+    │   ├── Business Foundation
+    │   ├── Audience & ICP
+    │   ├── Content Preferences
+    │   ├── Goals & Strategy
+    │   └── Platforms & Distribution
+    └── Output: Brand Blueprint → Notion Database
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                       PHASE 2: INTELLIGENCE                                   │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    🔬 WF1: RESEARCH ENGINE
+    ├── Fichier: components/ResearchEngine.jsx
+    ├── Route: /cge/research
+    ├── Design: Dark theme avec 4 tabs
+    ├── Features:
+    │   ├── Viral Hooks Library (18 hooks filtrables)
+    │   ├── Trend Radar (5 trends: Rising/Peaking/Declining)
+    │   ├── Competitor Analysis (7 competitors + metrics)
+    │   └── Source Data (10 scraping logs)
+    ├── Tech: Apify scrapers (IG/TT/YT/LI)
+    └── Output: Trend Database + Topic List
+         │
+         ▼
+
+    🧠 WF2: CONTENT DECISION ENGINE
+    ├── Fichier: components/ContentDecisionEngine.jsx
+    ├── Route: /cge/decisions
+    ├── Design: Light/Dark toggle
+    ├── Features:
+    │   ├── Calendrier hebdomadaire (20 slots)
+    │   ├── Pillar distribution bar (4 pillars avec targets)
+    │   ├── AI strategy reasoning panel
+    │   └── Side panel détaillé (priority score, hypothesis)
+    ├── Input: Performance Insights (FROM WF8) ← FLYWHEEL
+    └── Output: Content Calendar Approved
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                        PHASE 3: PRODUCTION                                    │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    ✍️ WF3: SCRIPT STUDIO
+    ├── Fichier: components/ScriptStudio.jsx
+    ├── Route: /cge/script-studio
+    ├── Design: Dark studio (#08080d)
+    ├── Features:
+    │   ├── Sidebar: 5 scripts filtrables par status
+    │   ├── Editor: 4 sections color-coded (HOOK/TENSION/VALUE/CTA)
+    │   ├── 3 Hook variants avec AI scores
+    │   ├── AI Review panel (6 scores: Hook/Retention/CTA/Tone/Length)
+    │   └── Tabs: Editor | Captions | History
+    ├── Tech: Claude API
+    └── Output: Final Scripts + Captions (IG/TT/YT/LI)
+         │
+         ▼
+
+    🎬 WF4+5: PRODUCTION HUB (Option A)
+    ├── Fichier: ProductionHub.jsx
+    ├── Route: /cge/production
+    ├── Design: Light theme (#f8f8f6)
+    ├── Features:
+    │   ├── Role switcher: Admin/Copywriter/Client/Editor
+    │   ├── Tabs: Scenes | Script | Video Versions | Caption
+    │   ├── Video player placeholder (timestamps overlay)
+    │   ├── Editing checklist (6 items: captions/broll/transitions/etc)
+    │   ├── AI QA panel (conformity score + transcript match)
+    │   ├── Multi-format export (9:16, 1:1, 16:9) avec progress
+    │   └── Correction timeline (video/text feedback)
+    ├── Tech: Creatomate + Whisper + AWS S3
+    └── Output: Edited Videos (multi-format) + S3 URLs
+         │
+         ├─── OU ───┐
+         │          │
+         ▼          ▼
+
+    🏗️ WF4+5: PIPELINE DASHBOARD (Option B)
+    ├── Fichier: components/PipelineDashboard.jsx
+    ├── Route: /cge/pipeline
+    ├── Design: Light theme, 3 colonnes
+    ├── Features:
+    │   ├── Sidebar: Pipeline overview (11 statuts)
+    │   ├── Main: 4 tabs (Scenes | Script & Copy | Versions | Caption)
+    │   ├── Scenes expandables color-coded (5 types)
+    │   ├── Copy history timeline
+    │   └── 5 modals (Approve/Revision/Upload/Submit/Correction)
+    └── Différence: Focus admin/workflow vs production/editing
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                      PHASE 4: DISTRIBUTION                                    │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    📡 WF6: PUBLISHING CENTER
+    ├── Fichier: components/PublishingCenter.jsx
+    ├── Route: /cge/publishing
+    ├── Design: Dark theme avec platform colors
+    ├── Features:
+    │   ├── Scheduling queue (5 videos, drag & drop)
+    │   ├── Platform cards (4): Instagram/TikTok/YouTube/LinkedIn
+    │   │   ├── Connection status (✅/❌)
+    │   │   ├── Scheduled count
+    │   │   ├── Best posting times
+    │   │   └── Caption preview
+    │   ├── 24-hour timeline (slots colorés par plateforme)
+    │   ├── Publication log (10 entries: Published/Failed/Scheduled)
+    │   └── CTA Strategy panel (4 CTAs avec performance)
+    ├── Tech: Platform APIs (IG/TT/YT/LI)
+    └── Output: Published Posts + Post IDs
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                  PHASE 5: ANALYTICS & FLYWHEEL                                │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    📊 WF7+8: PERFORMANCE ANALYTICS
+    ├── Fichier: components/PerformanceAnalytics.jsx
+    ├── Route: /cge/analytics
+    ├── Design: Dark premium avec gradients + glow
+    ├── Features:
+    │   ├── Period selector (7d/30d/90d)
+    │   ├── 6 KPI cards avec delta % (Views/Engagement/Followers/etc)
+    │   ├── Performance chart (Recharts Area) avec toggle metrics
+    │   ├── Content classification:
+    │   │   ├── Winners 🔥 (25% - 5 videos)
+    │   │   ├── Neutrals ⚡ (60% - 12 videos)
+    │   │   └── Losers 📉 (15% - 3 videos)
+    │   ├── Pattern Analysis (4 charts):
+    │   │   ├── Hook Performance (bar horizontal, 7 types)
+    │   │   ├── Pillar Engagement (bar vertical, 4 pillars)
+    │   │   ├── Format Trends (list avec arrows, 5 formats)
+    │   │   └── CTA Conversion (bar chart, 4 CTAs)
+    │   ├── Weekly Report Preview:
+    │   │   ├── Top 3 videos (raisons)
+    │   │   ├── Bottom 3 videos (learnings)
+    │   │   ├── 3 Key Insights
+    │   │   ├── Next week strategy
+    │   │   └── "Send Report" button
+    │   └── 5 AI Optimization Suggestions (toggle Apply)
+    ├── Tech: Platform APIs + AI Analysis
+    └── Output: Strategy Updates → ⟲ LOOP BACK TO WF2 (FLYWHEEL)
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                           FLYWHEEL LOOP                                       ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║   WF8 (Optimization) → Strategy Insights → WF2 (Content Decisions)           ║
+║                                                                               ║
+║   Exemple de boucle:                                                          ║
+║   1. WF8 détecte: "Contrarian hooks +34% engagement"                         ║
+║   2. WF8 suggère: "Increase Authority pillar 35% → 45%"                      ║
+║   3. Suggestion appliquée                                                     ║
+║   4. WF2 ajuste le calendrier: +2 slots Authority contrarian                 ║
+║   5. Production suit la nouvelle stratégie                                    ║
+║   6. WF7 mesure les résultats                                                 ║
+║   7. WF8 analyse → nouvelles optimisations → retour à 1                       ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                         DESIGN SYSTEMS                                        │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    🌑 DARK THEME (7 composants)
+    ├── Colors:
+    │   ├── Background:  #07070b
+    │   ├── Surface:     #0e0e16
+    │   ├── Border:      #1a1a2e
+    │   └── Accent:      #ff5722
+    ├── Utilisé par:
+    │   ├── ContentGrowthEngine
+    │   ├── OverviewDashboard
+    │   ├── OnboardingForm
+    │   ├── ResearchEngine
+    │   ├── ScriptStudio (#08080d variant)
+    │   ├── PublishingCenter
+    │   └── PerformanceAnalytics
+    └── Fonts: DM Sans + JetBrains Mono
+
+    ☀️ LIGHT THEME (2 composants)
+    ├── Colors:
+    │   ├── Background:  #f8f8f6
+    │   ├── Surface:     #ffffff
+    │   ├── Border:      #e8e6e1
+    │   └── Text:        #1a1a1a
+    ├── Utilisé par:
+    │   ├── ProductionHub
+    │   └── PipelineDashboard
+    └── Fonts: Instrument Sans + IBM Plex Mono
+
+    🔄 LIGHT/DARK TOGGLE (1 composant)
+    └── ContentDecisionEngine
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                        PLATFORM COLORS                                        │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    Instagram: #E1306C (Pink)
+    TikTok:    #00f2ea (Cyan)
+    YouTube:   #FF0000 (Red)
+    LinkedIn:  #0077B5 (Blue)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                          TECH STACK                                           │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    Frontend:
+    ├── React 19.0.0
+    ├── React Router v6
+    ├── Tailwind CSS 3.1.8
+    ├── React Icons (io5)
+    └── Recharts 2.x (charts)
+
+    APIs externes (via n8n):
+    ├── n8n              → Workflow orchestration
+    ├── Claude API       → Script generation (WF3)
+    ├── Apify            → Social scraping (WF1)
+    ├── Notion API       → Database (WF0/WF2/WF3)
+    ├── Whisper API      → Transcription (WF5)
+    ├── Creatomate       → Video editing (WF5)
+    ├── AWS S3           → Media storage (WF4/WF5)
+    ├── Instagram API    → Publishing + Analytics (WF6/WF7)
+    ├── TikTok API       → Publishing + Analytics (WF6/WF7)
+    ├── YouTube API      → Publishing + Analytics (WF6/WF7)
+    └── LinkedIn API     → Publishing + Analytics (WF6/WF7)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                      FICHIERS CRÉÉS (10 composants)                           │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    src/
+    ├── ContentGrowthEngine.jsx          ✅ Dashboard navigation
+    ├── OverviewDashboard.jsx            ✅ Vue système
+    ├── ProductionHub.jsx                ✅ WF4+5 Production
+    │
+    ├── components/
+    │   ├── OnboardingForm.jsx           ✅ WF0 Setup
+    │   ├── ResearchEngine.jsx           ✅ WF1 Intelligence
+    │   ├── ContentDecisionEngine.jsx    ✅ WF2 Decisions
+    │   ├── ScriptStudio.jsx             ✅ WF3 Scripts
+    │   ├── PipelineDashboard.jsx        ✅ WF4+5 Pipeline (alt)
+    │   ├── PublishingCenter.jsx         ✅ WF6 Distribution
+    │   └── PerformanceAnalytics.jsx     ✅ WF7+8 Analytics
+    │
+    ├── routes-cge.js                    ✅ Routes configuration
+    ├── layouts/cge/index.jsx            ✅ CGE Layout
+    └── App.jsx                          ✅ Updated (CGE route)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                       DOCUMENTATION CRÉÉE                                     │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    ├── README_CGE.md                    ✅ Overview complet
+    ├── CONTENT_GROWTH_ENGINE.md         ✅ Architecture détaillée
+    ├── QUICK_START.md                   ✅ Guide démarrage rapide
+    ├── INSTALL_DEPENDENCIES.md          ✅ Installation Recharts
+    └── ARCHITECTURE_OVERVIEW.txt        ✅ Ce fichier (visual map)
+
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                         ROUTES DISPONIBLES                                    │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+    http://localhost:3000/cge/dashboard      → ContentGrowthEngine
+    http://localhost:3000/cge/overview       → OverviewDashboard
+    http://localhost:3000/cge/onboarding     → WF0
+    http://localhost:3000/cge/research       → WF1
+    http://localhost:3000/cge/decisions      → WF2
+    http://localhost:3000/cge/script-studio  → WF3
+    http://localhost:3000/cge/production     → WF4+5
+    http://localhost:3000/cge/pipeline       → WF4+5 (alt)
+    http://localhost:3000/cge/publishing     → WF6
+    http://localhost:3000/cge/analytics      → WF7+8
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                            STATUS FINAL                                       ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║   ✅ 10 composants React créés                                                ║
+║   ✅ 2 dashboards principaux                                                  ║
+║   ✅ 9 workflows (WF0-WF8) implémentés                                        ║
+║   ✅ Flywheel WF8→WF2 établi                                                  ║
+║   ✅ 2 design systems harmonisés                                              ║
+║   ✅ Navigation complète configurée                                           ║
+║   ✅ Routes intégrées (/cge/*)                                                ║
+║   ✅ Documentation complète (4 fichiers)                                      ║
+║   ✅ Données demo réalistes                                                   ║
+║   ✅ Prêt pour intégration n8n                                                ║
+║                                                                               ║
+║   📦 Installation requise: npm install recharts                               ║
+║   🚀 Démarrage: npm start                                                     ║
+║   🌐 URL: http://localhost:3000 → redirect to /cge/dashboard                 ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+                            ⚡ CONTENT GROWTH ENGINE ⚡
+                               Ready to Launch 🚀
+

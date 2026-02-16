@@ -1,4 +1,5 @@
-import nft1 from "assets/img/nfts/NftBanner1.png";
+// import nft1 from "assets/img/nfts/NftBanner1.png";
+import nft1 from "assets/img/profile/banner.png";
 
 const Banner1 = () => {
   return (
