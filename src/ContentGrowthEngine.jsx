@@ -254,10 +254,11 @@ export default function ContentGrowthEngine() {
             <div>
               <div style={{
                 fontSize: 18,
-                fontWeight: 500,
+                fontWeight: 400,
                 color: C.text,
                 letterSpacing: "-0.02em",
-                fontFamily: "'Object Sans', -apple-system, sans-serif"
+                fontFamily: "'Object Sans', -apple-system, sans-serif",
+                fontStyle: "normal"
               }}>
                 AmplifyR
               </div>

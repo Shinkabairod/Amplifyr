@@ -362,7 +362,6 @@ const TopicCard = ({ topic, onApprove, onReject, onModify }) => {
           style={{
             fontSize: 14,
             color: "#713f12",
-            fontStyle: "italic",
             lineHeight: 1.6,
           }}
         >
@@ -539,7 +538,6 @@ const CollapsedTopicList = ({ topics, title, icon }) => {
                     borderRadius: 6,
                     fontSize: 13,
                     color: C.textSoft,
-                    fontStyle: "italic",
                   }}
                 >
                   "{topic.client_notes}"
