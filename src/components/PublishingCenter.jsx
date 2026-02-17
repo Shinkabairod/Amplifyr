@@ -6,7 +6,6 @@ import {
   IoTimeOutline,
   IoChevronUp,
   IoChevronDown,
-  IoToggle,
   IoCalendarOutline,
   IoLinkOutline,
   IoTrendingUp,

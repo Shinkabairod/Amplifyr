@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import {
   IoCheckmarkCircle,
-  IoWarning,
   IoSync,
-  IoEye,
   IoCreate,
   IoCloudUpload,
   IoVideocam,
   IoSend,
   IoChevronDown,
   IoChevronUp,
-  IoClose,
   IoShieldCheckmark,
   IoPencil,
   IoPerson,
   IoFilm,
   IoTime,
-  IoPlay
 } from 'react-icons/io5';
 
 const PipelineDashboard = () => {
@@ -206,8 +202,6 @@ const PipelineDashboard = () => {
     );
   };
 
-  const currentRoleData = roles.find(r => r.name === currentRole);
-
   const canApproveScript = currentRole === 'Admin' || currentRole === 'Copywriter';
   const canUploadRaw = currentRole === 'Admin' || currentRole === 'Client';
   const canSubmitEdit = currentRole === 'Admin' || currentRole === 'Editor';
@@ -307,7 +301,6 @@ const PipelineDashboard = () => {
             <div className="flex items-center gap-2 ml-6">
               <span className="text-xs text-gray-500 mr-2">Role:</span>
               {roles.map(role => {
-                const Icon = role.icon;
                 return (
                   <button
                     key={role.name}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoFlaskOutline, IoSearch, IoFilter, IoCheckmarkCircle, IoWarning, IoClose, IoTrendingUp, IoTrendingDown } from 'react-icons/io5';
+import { IoFlaskOutline, IoSearch, IoCheckmarkCircle, IoWarning, IoClose, IoTrendingUp, IoTrendingDown } from 'react-icons/io5';
 
 const ResearchEngine = () => {
   const [activeTab, setActiveTab] = useState('hooks');

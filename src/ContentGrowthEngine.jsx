@@ -187,7 +187,7 @@ export default function ContentGrowthEngine() {
   const [activeWorkflow, setActiveWorkflow] = useState("wf0");
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [formData, setFormData] = useState({});
-  const [currentRole, setCurrentRole] = useState(USER_ROLES.CLIENT);
+  const [currentRole] = useState(USER_ROLES.CLIENT);
 
   const currentWorkflow = WORKFLOWS.find(w => w.id === activeWorkflow);
   const roleConfig = ROLE_CONFIG[currentRole];

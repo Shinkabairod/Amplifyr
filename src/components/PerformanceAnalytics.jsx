@@ -13,22 +13,14 @@ import {
   IoSend,
   IoFlame,
   IoFlash,
-  IoCloseCircle
 } from 'react-icons/io5';
 import {
-  LineChart,
   BarChart,
-  RadarChart,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Line,
   Bar,
-  Radar,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
   Area,
   AreaChart

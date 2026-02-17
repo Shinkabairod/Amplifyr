@@ -3,7 +3,6 @@ import {
   IoPlayCircle,
   IoCheckmarkCircle,
   IoWarning,
-  IoCloseCircle,
   IoCloudUpload,
   IoDownload,
   IoChevronDown,
